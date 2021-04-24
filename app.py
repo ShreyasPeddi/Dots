@@ -22,11 +22,14 @@ class User:
 users=(
     User('Shreyas',37.9045286, -122.1445772),
     User('Vidhi',37.8884474, -122.1155922),
-    User('Regina',37.7884474, -122.0155922)
+    User('Regina',37.7884474, -122.0155922),
+    User('George',37.8984474, -122.2355922),
+    User('Alan',37.8884474, -122.0055922),
+    User('Prince',37.7884474, -122.2155922),
 )
 
 
-@app.route("/map-marker")
+@app.route("/")
 def map_marker():
     # this map using stamen terrain
     lat_list=[]
@@ -46,22 +49,43 @@ def map_marker():
     )
 
     folium.Marker(
-        location=[lat_list[1], lng_list[1]],
+        location=[lat_list[0], lng_list[0]],
         popup="<b>Vidhi here</b>",
         tooltip="Click Here!",
-        icon=folium.Icon(color='white')
+        icon=folium.Icon(color='blue')
     ).add_to(map)
 
     folium.Marker(
-        location=[lat_list[2], lng_list[2]],
+        location=[lat_list[1], lng_list[1]],
         popup="<b> Shreyas here</b>",
         tooltip="Click Here!",
         icon=folium.Icon(color='green')
     ).add_to(map)
 
     folium.Marker(
-        location=[45.53236, -122.8750],
-        popup="<b>Marker 3 here</b>",
+        location=[lat_list[2], lng_list[2]],
+        popup="<b>Regina here</b>",
+        tooltip="Click Here!",
+        icon=folium.Icon(color='red')
+    ).add_to(map)
+
+    folium.Marker(
+        location=[lat_list[3], lng_list[3]],
+        popup="<b>George here</b>",
+        tooltip="Click Here!",
+        icon=folium.Icon(color='yellow')
+    ).add_to(map)
+
+    folium.Marker(
+        location=[lat_list[4], lng_list[4]],
+        popup="<b>Alan here</b>",
+        tooltip="Click Here!",
+        icon=folium.Icon(color='white')
+    ).add_to(map)
+
+    folium.Marker(
+        location=[lat_list[5], lng_list[5]],
+        popup="<b>Prince here</b>",
         tooltip="Click Here!",
         icon=folium.Icon(color='red')
     ).add_to(map)
