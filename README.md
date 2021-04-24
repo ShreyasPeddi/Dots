@@ -1,2 +1,4 @@
 # Curie.
 Hackathon project - by Vidhi, Shreyas and Regina
+
+Project description: 
