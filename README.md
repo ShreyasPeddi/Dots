@@ -1,4 +1,4 @@
-# Curie.
+# Dot.
 YR HACKS Hackathon project
 
 Project description:  An integrated software which can create lasting connections between people of the same age group. This application can match people based on their interests and hobbies.
